@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Advanced Textile Solutions</title>
+  <link rel="icon" type="image/png" href="./Gallery/731e0316-fa9e-4a86-b3a7-bab115e8a659.jpeg" />
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo-container">
+        <img class="logo" src="./Gallery/731e0316-fa9e-4a86-b3a7-bab115e8a659.jpeg" alt="Logo" />
+      </div>
+      <h1 class="brand">ADVANCED TEXTILE SOLUTIONS</h1>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./projects.html">Projects</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./reviews.html">Reviews</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="contact_us_2">
+      <div class="responsive-container-block big-container">
+        <div class="blueBG"></div>
+        <div class="responsive-container-block container">
+          <form id="contact-form" class="form-box">
+            <div class="container-block form-wrapper">
+              <p class="text-blk contactus-head">Get in Touch</p>
+              <div class="responsive-container-block">
+                <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6">
+                  <p class="text-blk input-title">FIRST NAME</p>
+                  <input class="input" type="text" name="first_name" placeholder="Please enter first name..." required>
+                </div>
+                <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                  <p class="text-blk input-title">LAST NAME</p>
+                  <input class="input" type="text" name="last_name" placeholder="Please enter last name..." required>
+                </div>
+                <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                  <p class="text-blk input-title">EMAIL</p>
+                  <input class="input" type="email" name="email" placeholder="Please enter email..." required>
+                </div>
+                <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                  <p class="text-blk input-title">PHONE NUMBER</p>
+                  <input class="input" type="tel" name="phone" placeholder="Please enter phone number...">
+                </div>
+                <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12">
+                  <p class="text-blk input-title">WHAT DO YOU HAVE IN MIND</p>
+                  <textarea class="textinput" name="message" placeholder="Please enter query..." required></textarea>
+                </div>
+              </div>
+              <button type="submit" class="submit-btn">Submit</button>
+              <p id="form-status" style="margin-top: 1rem; font-size: 1rem;"></p>
+            </div>
+            <div class="contact-info-block">
+              <p class="info-label">📞 Contact Number: <span class="info-detail">(+44) 7713893233</span></p>
+              <p class="info-label">⏰ Working Hours: <span class="info-detail">Mon - Fri: 9:00 AM - 6:00 PM</span></p>
+            </div>            
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <span class="footer-icon" data-type="phone">📞</span>
+      <span class="footer-info" id="footer-phone">(+44)7713893233</span>
+      <span class="footer-icon" data-type="email">✉️</span>
+      <span class="footer-info" id="footer-email">ats@sewjackie.com</span>
+    </div>
+    <div class="footer-right">
+      <span class="footer-icon" data-type="link">🔗</span>
+      <span class="footer-info" id="footer-link">www.advancedtextiles.com</span>
+      <span class="footer-icon" data-type="video">Linkedin</span>
+      <span class="footer-info" id="footer-video">https://www.linkedin.com/in/jackie-cunningham-9a5398188</span>
+      <span class="footer-icon" data-type="photo">📷</span>
+      <span class="footer-info" id="footer-photo">advancedtextilesolutions</span>
+    </div>
+  </footer>
+
+  <script defer src="contact.js"></script>
+</body>
+</html>
