@@ -1,4 +1,4 @@
-/* contact.css */
+/* File: contact.css */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;700&display=swap');
 
@@ -178,11 +178,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.contact_us_2 .contactus-subhead {
-  color: #9c9c9c;
-  margin-bottom: 2rem;
-}
-
 .contact_us_2 .responsive-container-block {
   display: flex;
   flex-wrap: wrap;
@@ -222,33 +217,10 @@ body {
   background-color: #4f6e45;
 }
 
-.contact_us_2 .social-media-links {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 2rem;
-}
-
-.contact_us_2 .link-img {
-  width: 30px;
-  height: 30px;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: #333;
+/* NEW: success state */
+.submit-btn.sent {
+  background-color: #4CAF50; /* green */
   color: white;
-  margin-top: 50px;
-}
-
-.footer-left span,
-.footer-right span {
-  margin: 0 0.5rem;
-  font-size: 1.2rem;
-  cursor: pointer;
 }
 
 .contact-info-block {
@@ -268,6 +240,23 @@ footer {
 .contact-info-block .info-detail {
   font-weight: normal;
   margin-left: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #333;
+  color: white;
+  margin-top: 50px;
+}
+
+.footer-left span,
+.footer-right span {
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .footer-icon {
