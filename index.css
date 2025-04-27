@@ -121,11 +121,27 @@ body {
 
 .hero-text .headline {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.6;
-  max-width: 100%;
+  max-width: 700px;
   padding: 1rem;
+  text-align: center;
+  margin: 0 auto;
 }
+
+.hero-text .subline {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 0 1rem;
+  color: #333;
+  font-weight: normal;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .hero-image-container {
   flex: 1;
@@ -151,7 +167,7 @@ body {
   }
 
   .hero-image {
-    max-width: 80%;
+    max-width: 100%;
   }
 }
 
