@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Init EmailJS
-  emailjs.init("aEZoeDTxwgO0dwB39"); // ✅ Replace with your actual PUBLIC KEY
+  emailjs.init("WVvP4sbnS39iwche6");
 
   // ===== HAMBURGER MENU =====
   const hamburger = document.getElementById("hamburger");
@@ -41,23 +41,36 @@ document.addEventListener("DOMContentLoaded", () => {
   // ===== FORM SUBMISSION =====
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
+  const submitButton = document.getElementById("submit-button");
 
-  if (form && status) {
+  if (form && status && submitButton) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       status.innerText = "Sending...";
       status.style.color = "gray";
+      submitButton.disabled = true;
 
-      emailjs.sendForm("service_lp3d9ph", "template_6y4wpzr", this)
+      emailjs.sendForm("service_21l35zo", "template_6y4wpzr", this)
         .then(() => {
           status.innerText = "✅ Your message has been sent!";
           status.style.color = "green";
           form.reset();
+          submitButton.classList.add("sent");
+          submitButton.innerText = "Sent ✅";
+
+          setTimeout(() => {
+            alert("Thank you! Your message was sent successfully.");
+            submitButton.disabled = false;
+            submitButton.classList.remove("sent");
+            submitButton.innerText = "Submit";
+          }, 1500);
+
         })
         .catch((error) => {
           console.error("EmailJS error:", error);
           status.innerText = "❌ Failed to send. Please try again.";
           status.style.color = "red";
+          submitButton.disabled = false;
         });
     });
   }
