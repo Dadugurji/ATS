@@ -1,80 +1,142 @@
-<!-- reviews.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reviews - Advanced Textile Solutions</title>
-  <link rel="icon" type="image/png" href="./Gallery/731e0316-fa9e-4a86-b3a7-bab115e8a659.jpeg" />
-  <link rel="stylesheet" href="reviews.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;700&display=swap" rel="stylesheet" />
-</head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTKV47WWGC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <title>Reviews • Advanced Textile Solutions</title>
 
-  gtag('config', 'G-FTKV47WWGC');
-</script>
+  <!-- Favicon (same path as old file) -->
+  <link rel="icon" type="image/png"
+        href="./Gallery/731e0316-fa9e-4a86-b3a7-bab115e8a659.jpeg" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;700&display=swap"
+        rel="stylesheet" />
+
+  <!-- Page styles -->
+  <link rel="stylesheet" href="./reviews.css" />
+</head>
 <body>
+  <!-- ========== NAVBAR ========== -->
   <header class="navbar">
     <div class="nav-container">
       <div class="logo-container">
-        <img class="logo" src="./Gallery/731e0316-fa9e-4a86-b3a7-bab115e8a659.jpeg" alt="Logo" />
+        <!-- Logo image (same src as old file) -->
+        <img class="logo"
+             src="./Gallery/731e0316-fa9e-4a86-b3a7-bab115e8a659.jpeg"
+             alt="Advanced Textile Solutions logo" />
       </div>
+
       <h1 class="brand">ADVANCED TEXTILE SOLUTIONS</h1>
+
       <div class="hamburger" id="hamburger">
         <span></span><span></span><span></span>
       </div>
+
       <ul class="nav-links" id="nav-links">
         <li><a href="./index.html">Home</a></li>
         <li><a href="./about.html">About</a></li>
         <li><a href="./projects.html">Projects</a></li>
         <li><a href="./services.html">Services</a></li>
-        <li><a href="./reviews.html">Reviews</a></li>
+        <li><a class="active" href="./reviews.html">Reviews</a></li>
         <li><a href="./contact.html">Contact</a></li>
       </ul>
     </div>
   </header>
 
+  <!-- ========== MAIN ========== -->
   <main class="reviews-container">
+
+    <!-- ---- Submission form ---- -->
     <section class="review-form-section">
       <h2>Leave Your Review</h2>
+
       <form id="reviewForm">
         <input type="text" id="name" placeholder="Your Name" required />
-        <textarea id="reviewText" placeholder="Write your review here..." required></textarea>
+
+        <textarea id="reviewText"
+                  placeholder="Write your review here (max 1500 characters)…"
+                  maxlength="1500"
+                  required></textarea>
+
+        <label class="file-label">
+          <input type="file" id="avatar" accept="image/*" />
+          <span>Select a photo (optional)</span>
+        </label>
+
         <button type="submit">Submit Review</button>
       </form>
     </section>
 
-    <section class="reviews-display" id="reviewsDisplay">
-    </section>
+    <!-- ---- Reviews grid ---- -->
+    <section class="reviews-display" id="reviewsDisplay"></section>
   </main>
 
-  <footer>
-    <div class="footer-left">
-      <span class="footer-icon" data-type="phone">📞</span>
-      <span class="footer-info" id="footer-phone">(+44)7713893233</span>
-  
-      <span class="footer-icon" data-type="email">✉️</span>
-      <span class="footer-info" id="footer-email">ats@sewjackie.com</span>
+  <!-- ---- Modal for full testimonials ---- -->
+  <div id="reviewModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalAvatar" class="modal-avatar" alt="">
+      <h3 id="modalName"></h3>
+      <p id="modalText"></p>
     </div>
-  
-    <div class="footer-right">
-      <span class="footer-icon" data-type="link">🔗</span>
-      <span class="footer-info" id="footer-link">www.advancedtextiles.com</span>
-  
-      <span class="footer-icon" data-type="video">Linkedin</span>
-      <span class="footer-info" id="footer-video">https://www.linkedin.com/in/jackie-cunningham-9a5398188/?originalSubdomain=uk</span>
+  </div>
 
-      <span class="footer-icon" data-type="photo">📷</span>
-      <span class="footer-info" id="footer-photo">advancedtextilesolutions</span>
-  
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <!-- Left column : phone & email -->
+    <div class="footer-left">
+
+      <!-- Phone -->
+      <span class="footer-contact">
+        <a class="footer-link"
+           href="tel:+447713893233"
+           aria-label="Call +44 7713 893233">📞</a>
+        <span class="footer-info">+44 7713 893233</span>
+      </span>
+
+      <!-- Email -->
+      <span class="footer-contact">
+        <a class="footer-link"
+           href="mailto:ats@sewjackie.com"
+           aria-label="Email ats@sewjackie.com">✉️</a>
+        <span class="footer-info">ats@sewjackie.com</span>
+      </span>
+    </div>
+
+    <!-- Right column : web / LinkedIn / Instagram -->
+    <div class="footer-right">
+
+      <!-- Website -->
+      <span class="footer-contact">
+        <a class="footer-link"
+           href="https://www.advancedtextiles.com"
+           target="_blank" rel="noopener"
+           aria-label="Visit advancedtextiles.com">🔗</a>
+        <span class="footer-info">advancedtextiles.com</span>
+      </span>
+
+      <!-- LinkedIn -->
+      <span class="footer-contact">
+        <a class="footer-link"
+           href="https://www.linkedin.com/in/jackie-cunningham-9a5398188/"
+           target="_blank" rel="noopener"
+           aria-label="LinkedIn – Jackie Cunningham">in</a>
+        <span class="footer-info">LinkedIn profile</span>
+      </span>
+
+      <!-- Instagram -->
+      <span class="footer-contact">
+        <a class="footer-link"
+           href="https://www.instagram.com/advancedtextilesolutions"
+           target="_blank" rel="noopener"
+           aria-label="Instagram @advancedtextilesolutions">📷</a>
+        <span class="footer-info">@advancedtextilesolutions</span>
+      </span>
     </div>
   </footer>
 
-  <script src="review.js" defer></script>
+  <!-- Page scripts -->
+  <script src="./review.js" defer></script>
 </body>
 </html>
